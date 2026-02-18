@@ -1,2 +1,136 @@
 Hello I am fine 
 I am from Shirpur
+
+------------------------------------------
+Student@RCIIT MINGW64 ~
+$ git --version
+git version 2.53.0.windows.1
+
+Student@RCIIT MINGW64 ~
+$ mkdir devpr2
+mkdir: cannot create directory ‘devpr2’: File exists
+
+Student@RCIIT MINGW64 ~
+$ mkdir devpra2
+
+Student@RCIIT MINGW64 ~
+$ cd devpra2
+
+Student@RCIIT MINGW64 ~/devpra2
+$ touch add.text
+
+Student@RCIIT MINGW64 ~/devpra2
+$ start add.text
+
+Student@RCIIT MINGW64 ~/devpra2
+$ cat add.text
+Hello I am fine
+Student@RCIIT MINGW64 ~/devpra2
+$ git init
+Initialized empty Git repository in C:/Users/Student/devpra2/.git/
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/Student/devpra2/.git/
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ ls
+add.text
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git add .
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   add.text
+
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git commit -m "first commit"
+[master (root-commit) ab6178e] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 add.text
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git config --global user.email "rupeshdorik11@gmail.com"
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git config --global user.name "rupeshdorik"
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git remote add origin "https://github.com/rupeshdorik/Devops-Pratical-1.git"
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git remote push origin master
+error: unknown subcommand: `push'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --[no-]verbose    be verbose; must be placed before a subcommand
+
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 223 bytes | 55.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/rupeshdorik/Devops-Pratical-1/pull/new/master
+remote:
+To https://github.com/rupeshdorik/Devops-Pratical-1.git
+ * [new branch]      master -> master
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git pull origin master\
+> git pull origin master
+fatal: couldn't find remote ref mastergit
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git push origin master
+
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 924 bytes | 92.00 KiB/s, done.
+From https://github.com/rupeshdorik/Devops-Pratical-1
+ * branch            master     -> FETCH_HEAD
+   ab6178e..8847af0  master     -> origin/master
+Updating ab6178e..8847af0
+Fast-forward
+ add.text | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ cat add.txt
+cat: add.txt: No such file or directory
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$ cat add.text
+Hello I am fine
+I am from Shirpur
+
+Student@RCIIT MINGW64 ~/devpra2 (master)
+$
